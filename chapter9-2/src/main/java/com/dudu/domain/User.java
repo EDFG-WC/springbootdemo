@@ -6,10 +6,15 @@ package com.dudu.domain;
 public class User {
     private String userName;
     private String passWord;
+    private Integer id;
 
-    public User(String userName, String passWord) {
+    public User(String userName, String passWord, Integer id) {
         this.userName = userName;
         this.passWord = passWord;
+        this.id = id;
+    }
+
+    public User() {
     }
 
     public String getUserName() {
@@ -26,5 +31,22 @@ public class User {
 
     public void setPassWord(String passWord) {
         this.passWord = passWord;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userName='" + userName + '\'' +
+                ", passWord='" + passWord + '\'' +
+                ", id=" + id +
+                '}';
     }
 }
